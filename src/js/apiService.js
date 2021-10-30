@@ -1,6 +1,5 @@
 const API_KEY = '24039178-b232e977d52176d5b7f6604c7';
 const BASE_URL = 'https://pixabay.com/api/';
-
 export default class ApiServise {
     
     constructor() {
@@ -9,9 +8,7 @@ export default class ApiServise {
     }
     
     fetchGallery() {
-        
-        // console.log(this)
-      
+        console.log(this)
         let url = `${BASE_URL}?image_type=photo&orientation=horizontal&q=${this.searchQuery}&page=${this.page}&per_page=12&key=${API_KEY}`;
     
         return fetch(url)
@@ -35,8 +32,5 @@ export default class ApiServise {
     set query(newQuery) {
             return this.searchQuery = newQuery
         };
-    
-    
-    
 }
 
